@@ -13,5 +13,12 @@ Name: (Kallist**O** » Jupyte**R** » BUStool**S** » Rstudi**O** » 10**X**)
    + Over Representation Analysis (ORA) annotation of the genes for each cluster.  
 
 Find the jupyter notebooks for the analysis steps followed with Kallisto and ScanPy, divided in two steps:
-   * 1st, getting ready up to the gene matrix.
+   * 1st, getting ready up to the gene matrix, using the first part of the pipeline. (pipeKJBUSsingleCell10x.ipynb)
+      
    * 2nd, analysis of the data using ScanPy and RStudio scripts, for annotating the data.
+         For experimental condition → ExperimentalLeiden
+         For control condition → ControlLeiden 
+         For the enrichment of the clusters use the following R scripts:
+           Control                  →           v3_clusterAnnotation_controlPath.R
+           Experimental             →           v3_clusterAnnotation_experimentalPath.R
+
