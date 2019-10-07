@@ -12,13 +12,26 @@ Name: (Kallist**O** » Jupyte**R** » BUStool**S** » Rstudi**O** » 10**X**)
    + transforming SYMBOLS → ENTREZgeneID. 
    + Over Representation Analysis (ORA) annotation of the genes for each cluster.  
 
-Find the jupyter notebooks for the analysis steps followed with Kallisto and ScanPy, divided in two steps:
-   * 1st, getting ready up to the gene matrix, using the first part of the pipeline. (pipeKJBUSsingleCell10x.ipynb)
-      
-   * 2nd, analysis of the data using ScanPy and RStudio scripts, for annotating the data.
-         For experimental condition → ExperimentalLeiden
-         For control condition → ControlLeiden 
-         For the enrichment of the clusters use the following R scripts:
-           Control                  →           v3_clusterAnnotation_controlPath.R
-           Experimental             →           v3_clusterAnnotation_experimentalPath.R
 
+
+Find the jupyter notebooks for the analysis steps followed with Kallisto and ScanPy, divided in the following folders:
+
+   * 1st, getting ready up to the gene matrix, using the first part of the pipeline → **obtain_from_fastq_bus_and_gene_matrix**
+   
+   * 1.5th: get the geneID,transcripts,symbol list:
+         + Using python: **get_transcripts_with_GTF_file_and_python**   →     t2g.py and the GTF ensembl file(ensembl).
+         + Or get it with R: **get_transcripts_with_R_biomaRt**         →     get_transcripts_to_genes_dr.R
+   
+   
+   * 2nd, analysis of the data using ScanPy for each sample, in my case Control and Experimental using → **analyzing_the_gene_matrix**
+      
+         +  For control sample            →        ControlLeiden.ipynb
+         +  For experimental sample       →        ExperimentalLeiden.ipynb
+   
+   * 3rd, once generated the clusters and obtained the genes list associated, annotate them.  
+         +  For the enrichment of the clusters use the following R scripts:
+                  Control                  →           v3_clusterAnnotation_controlPath.R
+                  Experimental             →           v3_clusterAnnotation_experimentalPath.R
+         
+         +  or with scientific expertise.         
+   
